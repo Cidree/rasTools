@@ -1,3 +1,16 @@
+#' Title A Trous pansharpen
+#'
+#' @param bands SpatRaster of layers to apply pansharpening
+#' @param panchro SpatRaster with panchromatic band
+#' @param filter Filter to apply
+#' @param scale Bands spatial resolution/panchro spatial resolution.
+#' For landsat 8 is 30m/15m = 2
+#'
+#' @return SpatRaster
+#' @export
+#'
+#' @examples
+#' rs_pansharpen(rbgL8, panchroL8)
 rs_pansharpen <- function(bands,
                           panchro,
                           filter = matrix(c(1,1,1,1,2,1,1,1,1),
